@@ -1,7 +1,54 @@
+const fs = require('fs');
 var inquirer = require('inquirer');
 inquirer
   .prompt([
-    /* Pass your questions in here */
+    {
+        type: 'input',
+        message: 'Hello there! What is the title of your project?',
+        name: 'title' 
+    },
+    {
+        type: 'input',
+        message: 'What would you like your description to be?',
+        name: 'description' 
+    },
+    {
+        type: 'input',
+        message: 'What are the installation steps?',
+        name: 'installation' 
+    },
+    {
+        type: 'input',
+        message: 'What would you like the usage guide to be?',
+        name: 'usage' 
+    },
+    {
+        type: '',
+        message: 'Please select a licensing option, MIT is pretty good!',
+        name: 'license' 
+    },
+    {
+        type: 'input',
+        message: 'Any contributers for this project?',
+        name: 'contributers' 
+    },
+    {
+        type: 'input',
+        message: 'Any test instructions youd like to provide?',
+        name: 'test' 
+    },
+    {
+        type: 'input',
+        message: 'What is your github username?',
+        name: 'username' 
+    },
+    {
+        type: 'input',
+        message: 'What is a good email to contact you with for questions?',
+        name: 'email' 
+    },
+
+
   ])
   .then((answers) => {
     // Use user feedback for... whatever!!
