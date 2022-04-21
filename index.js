@@ -95,9 +95,9 @@ This application is covered under ${answers.license} license.
 
 ## Questions
 
-${answers.username}
+https://github.com/${answers.username}
 
-${answers.email}`
+You can reach me at ${answers.email} if you have any questions!`
 
     fs.writeFile('./readmeSample/readme.md', content, err=>{
         if(err){
