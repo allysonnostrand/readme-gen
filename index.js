@@ -63,7 +63,7 @@ inquirer
 
 ${answers.description}
 
-${answers.license}
+[![License:${answers.license}](https://img.shields.io/badge/License-${answers.license}-yellow.svg)](https://opensource.org/licenses/${answers.license})
 
 ## Table of Contents
 - [Installation](#installation)
@@ -91,7 +91,7 @@ ${answers.test}
 
 ## License
 
-${answers.license}
+This application is covered under ${answers.license} license. 
 
 ## Questions
 
@@ -99,7 +99,7 @@ ${answers.username}
 
 ${answers.email}`
 
-    fs.writeFile('readme.md', content, err=>{
+    fs.writeFile('./readmeSample/readme.md', content, err=>{
         if(err){
             throw err
         }
