@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/allysonnostrand/readme-gen/issues"
   },
-  "homepage": "https://github.com/allysonnostrand/readme-gen#readme"
+  "homepage": "https://github.com/allysonnostrand/readme-gen#readme",
+  "dependencies": {
+    "inquirer": "^8.2.2"
+  }
 }

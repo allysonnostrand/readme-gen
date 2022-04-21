@@ -5,53 +5,54 @@ inquirer
     {
         type: 'input',
         message: 'Hello there! What is the title of your project?',
-        name: 'title' 
+        name: 'title', 
     },
     {
         type: 'input',
         message: 'What would you like your description to be?',
-        name: 'description' 
+        name: 'description', 
     },
     {
         type: 'input',
         message: 'What are the installation steps?',
-        name: 'installation' 
+        name: 'installation', 
     },
     {
         type: 'input',
         message: 'What would you like the usage guide to be?',
-        name: 'usage' 
+        name: 'usage', 
     },
     {
-        type: '',
+        type: 'list',
         message: 'Please select a licensing option, MIT is pretty good!',
-        name: 'license' 
+        name: 'license',
+        choices: ['MIT', 'Apache', 'GPL'],
     },
     {
         type: 'input',
         message: 'Any contributers for this project?',
-        name: 'contributers' 
+        name: 'contributers', 
     },
     {
         type: 'input',
         message: 'Any test instructions youd like to provide?',
-        name: 'test' 
+        name: 'test', 
     },
     {
         type: 'input',
         message: 'What is your github username?',
-        name: 'username' 
+        name: 'username', 
     },
     {
         type: 'input',
         message: 'What is a good email to contact you with for questions?',
-        name: 'email' 
+        name: 'email', 
     },
 
 
   ])
   .then((answers) => {
-    // Use user feedback for... whatever!!
+    console.log(answers)
   })
   .catch((error) => {
     if (error.isTtyError) {
