@@ -1,5 +1,6 @@
 const fs = require('fs');
 var inquirer = require('inquirer');
+const { title } = require('process');
 inquirer
   .prompt([
     {
@@ -52,12 +53,48 @@ inquirer
 
   ])
   .then((answers) => {
-    console.log(answers)
+    console.log('you got it, baby!')
+
+    const content = 
+    `
+    ## ${title}
+
+    ## Description 
+
+    ${description}
+
+    ## Table of Contents
+    - [Installation](#installation)
+
+    ## Installation
+
+    ${installation}
+
+    ## Usage
+
+    ${usage}
+
+    ## Contributing
+
+    ${contributers}
+
+    ## Tests 
+
+    ${test}
+
+    ## License
+
+    ${license}
+
+    ## Questions
+
+    ${username}
+    ${email}
+    `
+    fs.writeFile('readme.md', answers, err=>{
+        if(err){
+            throw err
+        }
+    })
+
   })
-  .catch((error) => {
-    if (error.isTtyError) {
-      // Prompt couldn't be rendered in the current environment
-    } else {
-      // Something else went wrong
-    }
-  });
