@@ -1,6 +1,6 @@
 const fs = require('fs');
 var inquirer = require('inquirer');
-const { title } = require('process');
+
 inquirer
   .prompt([
     {
@@ -56,42 +56,50 @@ inquirer
     console.log('you got it, baby!')
 
     const content = 
-    `
-    ## ${title}
 
-    ## Description 
+`## ${answers.title}
 
-    ${description}
+## Description 
 
-    ## Table of Contents
-    - [Installation](#installation)
+${answers.description}
 
-    ## Installation
+${answers.license}
 
-    ${installation}
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [License](#license)
+- [Questions](#questions)
 
-    ## Usage
+## Installation
 
-    ${usage}
+${answers.installation}
 
-    ## Contributing
+## Usage
 
-    ${contributers}
+${answers.usage}
 
-    ## Tests 
+## Contributing
 
-    ${test}
+${answers.contributers}
 
-    ## License
+## Tests 
 
-    ${license}
+${answers.test}
 
-    ## Questions
+## License
 
-    ${username}
-    ${email}
-    `
-    fs.writeFile('readme.md', answers, err=>{
+${answers.license}
+
+## Questions
+
+${answers.username}
+
+${answers.email}`
+
+    fs.writeFile('readme.md', content, err=>{
         if(err){
             throw err
         }
