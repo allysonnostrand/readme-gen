@@ -57,7 +57,7 @@ inquirer
 
     const content = 
 
-`### ${answers.title}
+`## ${answers.title}
 
 ## Description 
 
