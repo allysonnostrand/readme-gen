@@ -23,6 +23,8 @@ Once you have inquirer installed you will be good to go!
 
 Here is the video link demonstrating the functionality of this application. 
 
+https://drive.google.com/file/d/1VPz-rAH5De44uDhbQEUxTeZpUZ0rkB14/view?usp=sharing
+
 ## License 
 
 This application is covered under the MIT license. 
